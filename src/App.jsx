@@ -1,14 +1,18 @@
+import { Navbar } from "./layout/Navbar"
 
 
 function App() {
 
 
   return (
-    <>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-    </>
+    <div className="min-h-screen overflow-x-hidden">
+      <Navbar/>
+      <main>
+
+        
+      </main>
+
+    </div>
   )
 }
 
