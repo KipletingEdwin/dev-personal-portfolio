@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button"
+import { Menu } from "lucide-react"
 
 
 const navLinks = [
@@ -37,6 +38,13 @@ export const Navbar = () => {
         <div className="hidden sm:block">
           <Button size="sm" >Contact Me</Button>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button className="md:hidden p-2 text-foreground">
+          <Menu />
+        </button>
+
+
        </nav>
     </header>
   )
