@@ -1,4 +1,4 @@
-import { Button } from "../components/Button"
+import { Button } from "@/components/Button"
 
 
 const navLinks = [
@@ -19,7 +19,7 @@ export const Navbar = () => {
         </a>
         {/* Desktop Nav */}
 
-        <div className="flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1"> 
             {
               navLinks.map((link, index)=> (
@@ -34,7 +34,7 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div>
+        <div className="hidden sm:block">
           <Button size="sm" >Contact Me</Button>
         </div>
        </nav>
