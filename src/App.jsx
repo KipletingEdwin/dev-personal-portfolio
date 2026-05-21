@@ -22,10 +22,7 @@ function App() {
         <Experience />
         <Testimonials />
         <Contact/>
-
-        
       </main>
-
     </div>
   )
 }
