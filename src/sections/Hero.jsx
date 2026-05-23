@@ -46,10 +46,21 @@ export const Hero = () => {
             </div>
 
             {/* Headline */}
-            <div>
+            <div className="space-y-4">
               <h1>
-                Crafting <span className="font-serif italic font-normal text-white">digital</span>
+                Crafting <span className="text-primary glow-text">digital</span>
+                <br/>
+                experiences with
+                <br /> 
+                <span className="font-serif italic font-normal text-white">
+                  precision
+                </span>
               </h1>
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in">
+                Hi, I'm Edwin Kipleting - a software engineer specializing in React, Angular, TypeScript,
+                JavaScript, and Ruby on Rails. I build scalable,performant web applications that users love.
+
+              </p>
             </div>
           </div>
           {/* Right Column - Profile Image */}
