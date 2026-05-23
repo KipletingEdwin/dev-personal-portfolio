@@ -1,4 +1,9 @@
 
+import {Button} from "@/components/Button";
+import { ArrowRight, GitBranch, Library } from "lucide-react";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 export const Hero = () => {
 
@@ -47,7 +52,7 @@ export const Hero = () => {
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Crafting <span className="text-primary glow-text">digital</span>
                 <br/>
                 experiences with
@@ -56,18 +61,55 @@ export const Hero = () => {
                   precision
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in">
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                 Hi, I'm Edwin Kipleting - a software engineer specializing in React, Angular, TypeScript,
                 JavaScript, and Ruby on Rails. I build scalable,performant web applications that users love.
-
               </p>
             </div>
+
+            {/* CTAs */}
+
+            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300"> 
+              <Button size="lg">
+                Contact Me <ArrowRight className="w-5 h-5"/>
+              </Button>
+              <AnimatedBorderButton />
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground">Follow me: </span>
+              {[
+                { icon: FaGithub, href: "#" },
+                { icon: FaLinkedin, href: "#" },
+                { icon: FaTwitter, href: "#" },
+              ].map((social, indx) => (
+                <a 
+                key={indx} 
+                href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
+                  {< social.icon className="w-5 h-5"/>}</a>
+              ))}
+            </div>
+
+
           </div>
           {/* Right Column - Profile Image */}
 
+          <div className="relative animate-fade-in animation-delay-300">
+            {/* Profile Image */}
+            <div className="relative max-w-md mx-auto">
+              <div className="absolute inset-0 
+              rounded-3xl bg-linear-to-br 
+              from primary/30 via transparent 
+              to-pri/10 blur-2xl animate-pulse "/>
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img src="/profile-photo.jpg" alt="Edwin Kipleting" className="w-full aspect-4/5 object-cover rounded-2xl"/>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
     </section>
   );
 
