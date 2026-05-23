@@ -145,6 +145,14 @@ export const Hero = () => {
         </div>
 
         {/* Skills Section */}
+        <div>
+          <p>Technologies I work with</p>
+          <div>
+            <div>
+              
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
